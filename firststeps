@@ -1,0 +1,17 @@
+Things to do after an installation:
+
+- run the update.sh script
+- Renew all SSH-Keys
+rm /etc/ssh/ssh_host_*
+dpkg-reconfigure openssh-server
+service ssh restart
+- Add aliases
+nano ~/.bashrc
+alias ll='ls -la | less'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias sagi='sudo apt-get install'
+alias sag='sudo apt-get'
+alias des='cd ~/Desktop '
+- install stuff:
+sudo apt-get -y install curl htop atop 
