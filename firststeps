@@ -25,6 +25,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias sagi='sudo apt-get install'
 alias sag='sudo apt-get'
+alias sagc='sudo apt-cache search'
 source ~/.bashrc
 
 # install stuff:
