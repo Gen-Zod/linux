@@ -1,6 +1,7 @@
 Things to do after an installation:
 
 - run the update.sh script
+- sudo rpi-update
 - Renew all SSH-Keys
 rm /etc/ssh/ssh_host_*
 dpkg-reconfigure openssh-server
