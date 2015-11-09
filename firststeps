@@ -1,18 +1,31 @@
 Things to do after an installation:
 
-- run the update.sh script
-- sudo rpi-update
-- Renew all SSH-Keys
-rm /etc/ssh/ssh_host_*
-dpkg-reconfigure openssh-server
-service ssh restart
-- Add aliases
-nano ~/.bashrc
-alias ll='ls -la | less'
+# run the update script
+sudo ./update.sh
+
+# Update Raspberry firmware
+sudo rpi-update
+
+# enable IPv6
+echo 'ipv6' | sudo tee --append /etc/modules
+sudo modprobe ipv6
+
+# Renew all SSH-Keys
+sudo rm /etc/ssh/ssh_host_*
+sudo dpkg-reconfigure openssh-server
+sudo service ssh restart
+
+# edit the MOTD banner?
+sudo nano /etc/motd
+
+# Add aliases
+nano ~/.bash_aliases
+alias ll='ls -la'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias sagi='sudo apt-get install'
 alias sag='sudo apt-get'
-alias des='cd ~/Desktop '
-- install stuff:
-sudo apt-get -y install curl htop atop 
+source ~/.bashrc
+
+# install stuff:
+sudo apt-get -y install curl htop atop lsof tcpdump iotop iptraf nethogs iftop nmon collectl slurm dstat multitail mtr cowsay sl cloc tig qalc ipcalc screen dtach tmux byobu figlet 
