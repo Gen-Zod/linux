@@ -29,4 +29,4 @@ alias sagc='sudo apt-cache search'
 source ~/.bashrc
 
 # install stuff:
-sudo apt-get -y install curl htop atop lsof tcpdump iotop iptraf nethogs iftop nmon collectl slurm dstat multitail mtr cowsay sl cloc tig qalc ipcalc screen dtach tmux byobu figlet 
+sudo apt-get -y install nmap curl htop atop lsof tcpdump iotop iptraf nethogs iftop nmon collectl slurm dstat multitail mtr cowsay sl cloc tig qalc ipcalc screen dtach tmux byobu figlet 
